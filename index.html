@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daylist - To Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <header class="topbar">
+            <h2>✓ daylist.</h2>
+            <p>A little progress every day</p>
+        </header>
+
+        <section class="hero">
+            <p>YOUR PERSONAL SPACE</p>
+            <h1>Make room for<br>
+                <span>what matters.</span>
+            </h1>
+            <p>One task at a time. Organize your day and stay focused.</p>
+        </section>
+
+        <section class="todo-card">
+
+            <div class="card-heading">
+                <div>
+                    <p>YOUR LIST</p>
+                    <h2>Today's Tasks</h2>
+                </div>
+                <span id="todayDate"></span>
+            </div>
+
+            <!-- Task Input -->
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to get done?"
+                    autocomplete="off"
+                >
+
+                <button type="submit">+ Add Task</button>
+            </form>
+
+            <p id="inputHint">Press Enter to add a task</p>
+
+            <!-- Task Filters -->
+            <div class="list-toolbar">
+
+                <div class="filters">
+                    <button class="filter-button active" data-filter="all">
+                        All <span id="allCount">0</span>
+                    </button>
+
+                    <button class="filter-button" data-filter="active">
+                        Active <span id="activeCount">0</span>
+                    </button>
+
+                    <button class="filter-button" data-filter="completed">
+                        Completed <span id="completedCount">0</span>
+                    </button>
+                </div>
+
+                <span id="progressLabel">0% done</span>
+
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <!-- Dynamic Task List -->
+            <ul id="taskList"></ul>
+
+            <!-- Empty Message -->
+            <div class="empty-state" id="emptyState">
+                <h3 id="emptyTitle">Your list is a blank canvas.</h3>
+                <p id="emptyMessage">
+                    Add your first task and make today count.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <span id="remainingText">No tasks yet</span>
+
+                <button id="clearCompleted" type="button">
+                    Clear Completed
+                </button>
+            </footer>
+
+        </section>
+
+        <div class="page-footer">
+            BUILT FOR SMALL WINS ✦ POWERED BY YOU
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
